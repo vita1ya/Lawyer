@@ -1,2 +1,113 @@
 @import config
 
+.btn
+  border: none
+  padding: 8px 20px
+  border-radius: 20px
+  display: block
+  background: #ed9121
+  color: #fff
+  &:focus
+    box-shadow: none
+  &:hover
+    background: darken(#ed9121, 5%)
+    color: #fff
+
+header
+  height: 101.2px
+  .contacts
+    padding: 10px 0
+    background: #fff
+    &-list
+      margin: 0
+      font-size: 14px
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      align-items: center
+      list-style: none
+      li
+        margin-left: 60px
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          width: 16px
+          height: 16px
+          left: -20px
+          background-repeat: no-repeat
+          top: 3px
+        &:first-child
+          margin-left: 0
+        a
+          color: #333
+      .location
+        &:before
+          background: url(/images/dest/location.png)
+      .email
+        &:before
+          background: url(/images/dest/email.png)
+          left: -24px
+          top: 4px
+      .phone
+        font-family: $robotoBold
+        &:before
+          background: url(/images/dest/phone.png)
+  .navbar
+    background: $head
+    .navbar-brand, .nav-link
+      color: #fff
+    .nav-link
+      cursor: pointer
+
+.section-title
+  font-family: $robotoBold
+  font-weight: bold
+  padding: 60px 0 40px 0
+  position: relative
+  text-align: center
+  text-transform: uppercase
+  &:after
+    content: ''
+    width: 30px
+    height: 3px
+    background: #333
+    position: absolute
+    transform: translateX(-50%)
+    top: 80%
+    left: 50%
+
+.greeting
+  width: 100vw
+  height: calc(100vh - 101.2px)
+  display: flex
+  align-items: center
+  position: relative
+  background: url(/images/dest/header_bg.jpg) no-repeat
+  background-position: center top
+  background-size: cover
+  &:before
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    background: #fff
+    opacity: .6
+    left: 0
+    top: 0
+  &-content
+    h1
+      font-family: $robotoBold
+      font-weight: 700
+    p
+      color: #000000
+
+.services
+  &-content
+    text-align: center
+    .tab-content
+      min-height: 300px
+      padding-top: 20px
+      text-align: left
+  .btn-all-services
+    display: inline-block
