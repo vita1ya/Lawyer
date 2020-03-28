@@ -43,14 +43,15 @@ function styles() {
 
 function scripts() {
 	return src([
-		'node_modules/jquery/dist/jquery.min.js',
-		'node_modules/bootstrap/dist/js/bootstrap.min.js',
-		'app/js/app.js' // app.js. Always at the end
-		])
-	.pipe(concat('app.min.js'))
-	.pipe(uglify()) // Minify JS (opt.)
-	.pipe(dest('app/js'))
-	.pipe(browserSync.stream())
+		"node_modules/jquery/dist/jquery.min.js",
+		"node_modules/bootstrap/dist/js/bootstrap.min.js",
+		"node_modules/slick-carousel/slick/slick.min.js",
+		"app/js/app.js" // app.js. Always at the end
+	])
+		.pipe(concat("app.min.js"))
+		.pipe(uglify()) // Minify JS (opt.)
+		.pipe(dest("app/js"))
+		.pipe(browserSync.stream());
 }
 
 // Images
