@@ -15,6 +15,8 @@
 
 .cover
   position: relative
+  background-position: center top !important
+  background-size: cover !important
   &:before
     content: ''
     width: 100%
@@ -26,6 +28,7 @@
     top: 0
 
 header
+  width: 100vw
   height: 101.2px
   .contacts
     padding: 10px 0
@@ -94,10 +97,7 @@ header
   height: calc(100vh - 101.2px)
   display: flex
   align-items: center
-  position: relative
   background: url(/images/dest/header_bg.jpg) no-repeat
-  background-position: center top
-  background-size: cover
   &-content
     h1
       font-family: $robotoBold
@@ -113,7 +113,8 @@ header
       padding-top: 20px
       text-align: left
   .btn-all-services
+    margin-bottom: 40px
     display: inline-block
 
 .advantages
-
+  background: url(/images/dest/advantages_bg.jpg)
