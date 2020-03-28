@@ -76,9 +76,8 @@ header
       cursor: pointer
 
 .section-title
-  font-family: $robotoBold
   font-weight: bold
-  padding: 60px 0 40px 0
+  padding: 20px 0 40px 0
   position: relative
   text-align: center
   text-transform: uppercase
@@ -89,7 +88,7 @@ header
     background: #333
     position: absolute
     transform: translateX(-50%)
-    top: 80%
+    top: 70%
     left: 50%
 
 .greeting
@@ -97,11 +96,8 @@ header
   height: calc(100vh - 101.2px)
   display: flex
   align-items: center
-  background: url(/images/dest/header_bg.jpg) no-repeat
+  background: url(/images/dest/greeting_bg.jpg) no-repeat
   &-content
-    h1
-      font-family: $robotoBold
-      font-weight: 700
     p
       color: #000000
 
@@ -113,8 +109,19 @@ header
       padding-top: 20px
       text-align: left
   .btn-all-services
-    margin-bottom: 40px
     display: inline-block
 
 .advantages
   background: url(/images/dest/advantages_bg.jpg)
+  .advantages-content
+    .card
+      height: 100%
+      border: none
+      border-radius: 0
+      .card-body
+        padding: 40px 20px 20px 20px
+        text-align: center
+        .card-img
+          width: 100px
+        .card-title
+          margin: 20px 0 10px 0
