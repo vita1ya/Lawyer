@@ -82,7 +82,7 @@ header
 
 .section-title
   font-weight: bold
-  padding: 20px 0 40px 0
+  padding-bottom: 40px
   position: relative
   text-align: center
   text-transform: uppercase
@@ -131,7 +131,7 @@ header
 
 .advantages
   background: url(/images/dest/advantages_bg.jpg)
-  .advantages-content
+  &-content
     .card
       height: 100%
       border: none
@@ -191,3 +191,57 @@ header
       background: $accent
       border-radius: 50%
       z-index: 2
+
+.stages
+  background: url(/images/dest/stages_bg.jpg)
+  &-content
+    margin-top: 20px
+    position: relative
+    z-index: 4
+    .timeline
+      width: 4px
+      height: 100%
+      margin: 0 auto
+      position: absolute
+      background: lighten($accent, 10%)
+      transform: translateX(-50%)
+      left: 50%
+    .stage
+      padding-top: 60px
+      &:before
+        content: ''
+        padding: 8px 16px
+        background: $accent
+        border-radius: 50%
+        border: 3px solid lighten($accent, 10%)
+        position: absolute
+      &-content
+        padding: 10px 20px
+        background: #fff
+    .left
+      text-align: right
+      &:before
+        right: -24px
+      .stage-content
+        margin-right: 30px
+    .right
+      &:before
+        left: -24px
+      .stage-content
+        margin-left: 30px
+    .first-step
+      padding-top: 0
+      &:before
+        content: '1'
+    .second-step
+      &:before
+        content: '2'
+    .third-step
+      &:before
+        content: '3'
+    .fourth-step
+      &:before
+        content: '4'
+		.fifth-step
+      &:before
+        content: '5'
