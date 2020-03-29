@@ -5,13 +5,16 @@
   padding: 8px 20px
   border-radius: 20px
   display: block
-  background: #ed9121
+  background: $accent
   color: #fff
   &:focus
     box-shadow: none
   &:hover
-    background: darken(#ed9121, 5%)
+    background: darken($accent, 5%)
     color: #fff
+
+a.btn
+  display: inline-block
 
 .cover
   position: relative
@@ -100,6 +103,7 @@ header
   background: url(/images/dest/greeting_bg.jpg) no-repeat
   &-content
     p
+      padding: 10px 0 20px 0
       color: #000000
 
 .services
@@ -109,8 +113,6 @@ header
       min-height: 300px
       padding-top: 20px
       text-align: left
-  .btn-all-services
-    display: inline-block
 
 .advantages
   background: url(/images/dest/advantages_bg.jpg)
@@ -126,3 +128,51 @@ header
           width: 100px
         .card-title
           margin: 20px 0 10px 0
+
+.reviews
+  text-align: center
+  &-content
+    text-align: left
+    &:before, &:after
+      content: ''
+      width: 100px
+      height: 100%
+      position: absolute
+      z-index: 1
+      top: 0
+    &:before
+      left: 0
+      box-shadow: inset 140px 0 40px -60px #fff
+    &:after
+      right: 0
+      box-shadow: inset -140px 0 40px -60px #fff
+    .review
+      outline: none
+      padding: 0 40px 20px 40px
+      position: relative
+      .reviewer
+        line-height: 1
+      .review-date
+        font-size: 12px
+        color: #cccccc
+      .review-content
+        position: relative
+    .slick-current
+      &:before, &:after
+        font-size: 72px
+        position: absolute
+        transform: translateY(-50%)
+        color: #ccc
+        top: 50%
+      &:before
+        content: '„'
+        left: 0
+      &:after
+        content: '“'
+        right: 0
+    .slick-prev, .slick-next
+      width: 40px
+      height: 40px
+      background: $accent
+      border-radius: 50%
+      z-index: 2
