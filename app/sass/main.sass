@@ -6,6 +6,7 @@
   border-radius: 20px
   display: block
   background: $accent
+  border-bottom: 3px solid darken($accent, 10%)
   color: #fff
   &:focus
     box-shadow: none
@@ -109,10 +110,24 @@ header
 .services
   &-content
     text-align: center
+    .nav-tabs
+      border-color: $accent
+      .nav-link.active, .nav-link.active:hover
+        border-color: $accent $accent #fff
+        color: $accent
+      .nav-link
+        border-radius: 0
+        &:hover
+          border-bottom-color: $accent
+          color: #333
     .tab-content
       min-height: 300px
       padding-top: 20px
       text-align: left
+      .list-services
+        list-style: none
+        li
+          padding: 8px 0
 
 .advantages
   background: url(/images/dest/advantages_bg.jpg)
@@ -155,8 +170,8 @@ header
       .review-date
         font-size: 12px
         color: #cccccc
-      .review-content
-        position: relative
+      .review-text
+        margin-top: 6px
     .slick-current
       &:before, &:after
         font-size: 72px
