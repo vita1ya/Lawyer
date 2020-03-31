@@ -4,7 +4,6 @@
   border: none
   padding: 8px 20px
   border-radius: 20px
-  display: block
   background: $accent
   border-bottom: 3px solid darken($accent, 10%)
   color: #fff
@@ -31,47 +30,63 @@ a.btn
     left: 0
     top: 0
 
+.contacts
+  padding: 10px 0
+  &-list
+    margin: 0
+    padding: 0
+    font-size: 14px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    list-style: none
+    li
+      position: relative
+      margin-left: 80px
+      &:before
+        left: -22px
+      &:first-child
+        margin-left: 0
+      &:before
+        content: ''
+        position: absolute
+        width: 16px
+        height: 16px
+        top: 3px
+  .location
+    &:before
+      background: url(/images/dest/contacts.png)
+  .email
+    &:before
+      background: url(/images/dest/contacts.png)
+  .phone
+    font-family: $robotoBold
+    &:before
+      background: url(/images/dest/contacts.png)
+
 header
   width: 100vw
   height: 101.2px
   .contacts
-    padding: 10px 0
     background: #fff
     &-list
-      margin: 0
-      font-size: 14px
-      display: flex
-      flex-direction: row
-      justify-content: flex-end
-      align-items: center
-      list-style: none
       li
-        margin-left: 60px
-        position: relative
-        &:before
-          content: ''
-          position: absolute
-          width: 16px
-          height: 16px
-          left: -20px
-          background-repeat: no-repeat
-          top: 3px
-        &:first-child
-          margin-left: 0
         a
           color: #333
       .location
         &:before
-          background: url(/images/dest/location.png)
+          background-position: 32px 0
       .email
         &:before
-          background: url(/images/dest/email.png)
+          background-position: 16px 0
           left: -24px
           top: 4px
       .phone
-        font-family: $robotoBold
+        a
+          color: $accent
         &:before
-          background: url(/images/dest/phone.png)
+          background-position: 0 16px
   .navbar
     width: 100vw
     background: $head
@@ -130,6 +145,7 @@ header
           padding: 8px 0
 
 .advantages
+  padding-bottom: 120px
   background: url(/images/dest/advantages_bg.jpg)
   &-content
     .card
@@ -207,7 +223,7 @@ header
       transform: translateX(-50%)
       left: 50%
     .stage
-      padding-top: 60px
+      padding-top: 50px
       &:before
         content: ''
         padding: 8px 16px
@@ -218,17 +234,31 @@ header
       &-content
         padding: 10px 20px
         background: #fff
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          border-top: 6px solid transparent
+          border-bottom: 6px solid transparent
+          transform: translateY(-50%)
+          top: 50%
     .left
       text-align: right
       &:before
         right: -24px
       .stage-content
         margin-right: 30px
+        &:after
+          border-left: 10px solid #fff
+          right: -10px
     .right
       &:before
         left: -24px
       .stage-content
         margin-left: 30px
+        &:after
+          border-right: 10px solid #fff
+          left: -10px
     .first-step
       padding-top: 0
       &:before
@@ -245,3 +275,36 @@ header
 		.fifth-step
       &:before
         content: '5'
+
+.consultation
+  &-content
+    text-align: center
+    .btn-record
+      margin-top: 20px
+
+footer
+  background: $head
+  .contacts
+    padding: 20px 0
+    color: $accent
+    &-list
+      &:before
+        left: 20px
+        top: 5px
+      li
+        a
+          color: $accent
+      .location
+        &:before
+          background-position: 32px 16px
+      .email
+        &:before
+          background-position: 16px 16px
+      .phone
+        &:before
+          background-position: 0 16px
+  .copyright
+    padding-bottom: 4px
+    font-size: 12px
+    text-align: center
+    color: #fff
