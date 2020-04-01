@@ -1,1 +1,1 @@
-<p>Develop jurist website</p>
+<p>Develop Lawyer website</p>
