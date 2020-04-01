@@ -9,8 +9,6 @@ $(document).ready(() => {
 		$('.needs-validation').removeClass('was-validated');
 	})
 
-	$('#request').modal();
-
 	$('#request').on('hidden.bs.modal', function (e) {
 		$('#request-form')[0].reset();
 	})
