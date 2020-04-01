@@ -279,10 +279,11 @@ header
 .consultation
   &-content
     text-align: center
-    .btn-record
+    .btn-request
       margin-top: 20px
 
 footer
+  width: 100vw
   background: $head
   .contacts
     padding: 20px 0
@@ -308,3 +309,12 @@ footer
     font-size: 12px
     text-align: center
     color: #fff
+
+.modal
+  &-content
+    .modal-body
+      .form-control:focus
+        box-shadow: none
+      .form-check-label
+        a
+          text-decoration: underline

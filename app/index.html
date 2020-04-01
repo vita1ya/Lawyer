@@ -71,7 +71,7 @@
 					<div class="greeting-content">
 						<h1>Юридические&nbsp;услуги<br>в Асбесте</h1>
 						<p>Решим любые сложные юридические вопросы. Можно написать коротко о себе, то что нужно сказать клиенту сразу</p>
-						<button class="btn btn-record" data-toggle="modal" data-target="#record-modal">Запись на консультацию</button>
+						<button class="btn btn-request" data-toggle="modal" data-target="#request">Запись на консультацию</button>
 					</div>
 				</div>
 			</div>
@@ -281,8 +281,8 @@
 		<div class="container">
 			<h2 class="section-title">Бесплатная консультация</h2>
 			<div class="consultation-content">
-				<p>Остались вопросы?<br>Напишите нам вопрос и мы обязательно свяжемся с Вами в ближайшее время</p>
-				<button class="btn btn-record" data-toggle="modal" data-target="#record-modal">Получить консультацию</button>
+				<p>Остались вопросы?<br>Напишите нам вопрос и мы обязательно Вам ответим или свяжемся в ближайшее время</p>
+				<button class="btn btn-request" data-toggle="modal" data-target="#request">Запись на консультацию</button>
 			</div>
 		</div>
 	</section>
@@ -308,21 +308,56 @@
 		</div>
 	</footer>
 
-	<div class="modal fade" id="record-modal">
+	<div class="modal fade" id="request">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Запись на консультацию</h5>
-					<button type="button" class="close" data-dismiss="modal">
-						<span>&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					...
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn">Отправить</button>
-				</div>
+				<form id="request-form" class="needs-validation" novalidate>
+					<div class="modal-header">
+						<h5 class="modal-title">Запись на консультацию</h5>
+						<button type="button" class="close" data-dismiss="modal">
+							<span>&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="name-form">Организация или ФИО</label>
+							<input type="text" class="form-control" id="name-form" required>
+							<div class="invalid-feedback">Поле должно быть заполнено</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-6">
+								<label for="phone-form">Телефон <span class="required-star">*</span></label>
+								<input type="text" class="form-control" id="phone-form" required>
+								<div class="invalid-feedback">Поле должно быть заполнено</div>
+							</div>
+							<div class="form-group col-6">
+								<label for="email-form">E-mail</label>
+								<input type="email" class="form-control" id="email-form" required>
+								<div class="invalid-feedback">Поле должно быть заполнено</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="theme-form">Тема</label>
+							<input type="text" class="form-control" id="theme-form" required>
+							<div class="invalid-feedback">Поле должно быть заполнено</div>
+						</div>
+						<div class="form-group">
+							<label for="message-form">Сообщение</label>
+							<textarea class="form-control" id="message-form" rows="3" required></textarea>
+							<div class="invalid-feedback">Поле должно быть заполнено</div>
+						</div>
+						<div class="form-group">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="check-form" required>
+								<label class="form-check-label" for="check-form">Я принимаю условия <a href="">политики конфиденциальности</a></label>
+								<div class="invalid-feedback">Условия должны быть приняты</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn sent-request">Отправить</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
