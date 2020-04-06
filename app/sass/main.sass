@@ -17,43 +17,32 @@ a.btn
   display: inline-block
 
 .cover
-  position: relative
+  width: 100%
+  height: 100%
+  position: absolute
   background-position: center top !important
   background-size: cover !important
-  &:before
-    content: ''
-    width: 100%
-    height: 100%
-    position: absolute
-    background: #fff
-    opacity: .6
-    left: 0
-    top: 0
+  background: #fff
+  opacity: .6
+  left: 0
+  top: 0
 
 .contacts
-  padding: 10px 0
   &-list
     margin: 0
     padding: 0
-    font-size: 14px
     display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
     list-style: none
     li
+      padding-left: 26px
       position: relative
-      margin-left: 80px
-      &:before
-        left: -22px
-      &:first-child
-        margin-left: 0
       &:before
         content: ''
         position: absolute
         width: 16px
         height: 16px
         top: 3px
+        left: 0
   .location
     &:before
       background: url(/images/dest/contacts.png)
@@ -69,18 +58,26 @@ header
   width: 100vw
   height: 101.2px
   .contacts
+    padding: 10px 0
     background: #fff
+    font-size: 14px
     &-list
+      flex-direction: row
+      justify-content: center
+      align-items: center
       li
+        margin-left: 80px
+        left: -22px
         a
           color: #333
+      &:first-child
+        margin-left: 0
       .location
         &:before
           background-position: 32px 0
       .email
         &:before
           background-position: 16px 0
-          left: -24px
           top: 4px
       .phone
         a
@@ -90,10 +87,11 @@ header
   .navbar
     width: 100vw
     background: $head
-    .navbar-brand, .nav-link
+    .navbar-brand
       color: #fff
     .nav-link
       cursor: pointer
+      color: $accent
 
 .section-title
   font-weight: bold
@@ -113,16 +111,28 @@ header
 
 .greeting
   width: 100vw
-  height: calc(100vh - 101.2px)
+  height: calc(100vh - 1.2px)
+  padding-bottom: 180px
   display: flex
   align-items: center
-  background: url(/images/dest/greeting_bg.jpg) no-repeat
+  .cover
+    background: url(/images/dest/greeting_bg.jpg) no-repeat
   &-content
     p
       padding: 10px 0 20px 0
       color: #000000
+  &:after
+    content: ''
+    width: 100vw
+    height: 100px
+    border-left: 50vw solid #fff
+    border-right: 50vw solid #fff
+    border-top: 100px solid transparent
+    position: absolute
+    bottom: 0
 
 .services
+  padding-bottom: 0
   &-content
     text-align: center
     .nav-tabs
@@ -144,9 +154,22 @@ header
         li
           padding: 8px 0
 
+.advantages, .stages
+  &:before, &:after
+    content: ''
+    width: 100vw
+    height: 100px
+    position: absolute
+  &:before
+    z-index: 1
+    top: 0
+  &:after
+    bottom: 0
+
 .advantages
-  padding-bottom: 120px
-  background: url(/images/dest/advantages_bg.jpg)
+  padding: 160px 0 160px 0
+  .cover
+    background: url(/images/dest/advantages_bg.jpg)
   &-content
     .card
       height: 100%
@@ -159,6 +182,14 @@ header
           width: 100px
         .card-title
           margin: 20px 0 10px 0
+  &:before
+    border-left: 50vw solid transparent
+    border-right: 50vw solid transparent
+    border-top: 100px solid #fff
+  &:after
+    border-left: 50vw solid #fff
+    border-right: 50vw solid #fff
+    border-top: 100px solid transparent
 
 .reviews
   text-align: center
@@ -210,10 +241,21 @@ header
       z-index: 2
 
 .stages
-  background: url(/images/dest/stages_bg.jpg)
+  padding-bottom: 180px
+  .cover
+    background: url(/images/dest/stages_bg.jpg) no-repeat
+  &:before
+    border-left: 50vw solid #fff
+    border-right: 50vw solid #fff
+    border-bottom: 100px solid transparent
+  &:after
+    border-left: 50vw solid transparent
+    border-right: 50vw solid transparent
+    border-bottom: 100px solid #fff
   &-content
     margin-top: 20px
     position: relative
+    overflow: hidden
     z-index: 4
     .timeline
       width: 4px
@@ -232,6 +274,7 @@ header
         border-radius: 50%
         border: 3px solid lighten($accent, 10%)
         position: absolute
+        bottom: 0
       &-content
         padding: 10px 20px
         background: #fff
@@ -278,6 +321,7 @@ header
         content: '5'
 
 .consultation
+  padding-top: 40px
   &-content
     text-align: center
     .btn-request
@@ -285,18 +329,34 @@ header
 
 footer
   width: 100vw
+  padding: 40px 0 20px 0
   background: $head
-  .contacts
-    padding: 20px 0
-    border-bottom: 1px solid $accent
+  a
     color: $accent
+  .navigation
+    .menu, .submenu
+      margin: 0
+      padding: 0
+      color: $accent
+      list-style: none
+    .menu
+      li
+        padding-left: 14px
+        position: relative
+        &:before
+          content: '\203A'
+          position: absolute
+          left: 0
+          top: -2px
+  .contacts
     &-list
+      flex-direction: column
       &:before
         left: 20px
         top: 5px
       li
-        a
-          color: $accent
+        line-height: 1.65
+        color: $accent
       .location
         &:before
           background-position: 32px 16px
@@ -307,9 +367,7 @@ footer
         &:before
           background-position: 0 16px
   .copyright
-    padding: 10px 0 10px 0
     font-size: 12px
-    text-align: center
     color: #fff
 
 .modal

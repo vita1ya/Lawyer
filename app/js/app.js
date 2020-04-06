@@ -17,7 +17,7 @@ $(window).scroll(() => {
 	//$(document).scrollTop() > $('header .contacts').innerHeight() ? navbar.addClass('fixed-top') : navbar.removeClass('fixed-top')
 })
 
-$('.reviews-content').slick({
+$('.reviews-slider').slick({
 	centerMode: true,
 	centerPadding: '200px',
 	arrows: true,
