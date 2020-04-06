@@ -5,12 +5,9 @@ $(document).ready(() => {
 		$('.needs-validation').addClass('was-validated');
 	})
 
-	$('.btn-request').click(() => {
-		$('.needs-validation').removeClass('was-validated');
-	})
-
-	$('#request').on('hidden.bs.modal', function (e) {
+	$('#request').on('hidden.bs.modal', () => {
 		$('#request-form')[0].reset();
+		$('.needs-validation').removeClass('was-validated');
 	})
 })
 
