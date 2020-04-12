@@ -56,7 +56,6 @@ a.btn
 
 header
   width: 100vw
-  height: 101.2px
   .contacts
     padding: 10px 0
     background: #fff
@@ -86,12 +85,29 @@ header
           background-position: 0 16px
   .navbar
     width: 100vw
+    padding: 0 16px
     background: $head
     .navbar-brand
       color: #fff
-    .nav-link
-      cursor: pointer
-      color: $accent
+    .navbar-nav
+      .nav-item
+        &:hover, &.active
+          background: lighten($head, 6%)
+        .nav-link
+          padding: 16px 10px
+          cursor: pointer
+          color: $accent
+        .dropdown-menu
+          margin: 0
+          background: lighten($head, 6%)
+          border-radius: 0
+          border: none
+          .dropdown-item
+            padding: 10px 20px
+            font-size: 14px
+            color: $accent
+            &:hover
+              background: lighten($head, 8%)
 
 .section-title
   font-weight: bold
