@@ -24,5 +24,25 @@ $('.reviews-slider').slick({
 	infinite: true,
   autoplay: true,
   autoplaySpeed: 5000,
-	slidesToShow: 1
+	slidesToShow: 1,
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				centerPadding: '150px'
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				centerPadding: '60px'
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				centerPadding: '0'
+			}
+		}
+	]
 });

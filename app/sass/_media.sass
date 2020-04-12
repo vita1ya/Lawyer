@@ -2,19 +2,177 @@
 	
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  /**/
+  body, .btn
+    font-size: 14px
+
+  section
+    padding: 40px 0 60px 0
+
+  .section-title
+    font-size: 1.5rem
+    &:after
+      width: 20px
+      top: 60%
+
+  .greeting
+    .greeting-content
+      h1
+        font-size: 2rem
+      p
+        font-size: 14px
+
+  .services
+    .tab-content
+      min-height: 240px
+    
+  .greeting:after, .advantages:before, .advantages:after
+      border-top-width: 80px
+
+  .stages
+    &:before, &:after
+      border-bottom-width: 80px
+
+  .advantages
+    padding: 120px 0 140px 0
+    .advantages-content
+      .card
+        min-height: 260px
+        .card-img
+          width: 70px
+        .card-title
+          font-size: 1rem
+  
+  .reviews
+    padding-bottom: 40px
+
+  .stages
+    padding: 80px 0 120px 0
+    .stages-content
+      .wrapper
+        .stage
+          p
+            padding: 14px 20px
+
+  footer
+    padding-top: 20px
+    .copyright
+      h5
+        font-size: 1rem
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-  /**/
+  .advantages
+    .advantages-content
+      .card
+        min-height: 250px
+        margin-top: 30px
+        .card-img
+          width: 80px
+        .card-title
+          font-size: 1.25rem
+
+  .stages
+    .stages-content
+      .wrapper
+        width: 60%
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-  /**/
+  section
+    padding: 30px 0 40px 0
+  
+  header
+    .contacts
+      .contacts-list
+        flex-wrap: wrap
+        li
+          margin-left: 0
+          &:nth-child(1), &:nth-child(2)
+            width: 50%
+          &:nth-child(3)
+            display: none
+
+  .greeting:after, .advantages:before, .advantages:after
+      border-top-width: 60px
+
+  .services
+    .services-content
+      .tab-content
+        margin-bottom: 20px
+        .list-services
+          margin: 0
+
+  .stages
+    &:before, &:after
+      border-bottom-width: 60px
+
+  .advantages
+    padding: 100px 0 80px 0
+    .advantages-content
+      .card
+        width: 60%
+        margin-left: auto
+        margin-right: auto
+        .card-img
+          width: 70px
+
+  .stages
+    .stages-content
+      .wrapper
+        width: 80%
+
+  .reviews
+    .reviews-content
+      .reviews-slider
+        .slick-prev
+          left: 0
+        .slick-next
+          right: 0
+
+  footer
+    .copyright, .contacts
+      margin-top: 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  /**/
+  header
+    .contacts
+      .contacts-list
+        li
+          &:nth-child(1), &:nth-child(2)
+            width: 100%
+
+  .greeting:after, .advantages:before, .advantages:after
+      border-top-width: 40px
+
+  .stages
+    &:before, &:after
+      border-bottom-width: 40px
+
+  .greeting
+    .greeting-content
+      h1
+        font-size: 1.5rem
+
+  .advantages
+    padding-top: 80px
+    .advantages-content
+      .card
+        width: 90%
+
+  .reviews
+    .reviews-content
+      &:before, &:after
+        display: none
+      .reviews-slider
+        .slick-prev, .slick-next
+          top: -56px
+      
+  .stages
+    padding: 60px 0 100px 0
+    .stages-content
+      .wrapper
+        width: 100%
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

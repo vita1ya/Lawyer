@@ -28,7 +28,7 @@ a.btn
   top: 0
 
 .contacts
-  &-list
+  .contacts-list
     margin: 0
     padding: 0
     display: flex
@@ -60,17 +60,17 @@ header
     padding: 10px 0
     background: #fff
     font-size: 14px
-    &-list
+    .contacts-list
       flex-direction: row
       justify-content: center
       align-items: center
       li
+        padding-left: 22px
         margin-left: 80px
-        left: -22px
         a
           color: #333
-      &:first-child
-        margin-left: 0
+        &:first-child
+          margin-left: 0
       .location
         &:before
           background-position: 32px 0
@@ -87,11 +87,70 @@ header
     width: 100vw
     padding: 0 16px
     background: $head
+    position: absolute
+    z-index: 1
     .navbar-brand
+      padding: 11px 0
       color: #fff
+    .navbar-toggler
+      width: 30px
+      height: 30px
+      padding: 0
+      display: inline-block
+      border: none
+      position: relative
+      &:focus
+        outline: none
+      .navbar-toggler-icon
+        display: block
+        margin-top: -2px
+        transition-duration: 0.075s
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+      .navbar-toggler-icon, .navbar-toggler-icon:before, .navbar-toggler-icon:after
+        width: 100%
+        height: 4px
+        background: $accent
+        border-radius: 4px
+        position: absolute
+        transition-property: transform
+        transition-duration: 0.15s
+        transition-timing-function: ease
+      .navbar-toggler-icon:before, .navbar-toggler-icon:after
+        content: ''
+        display: block
+    .navbar-toggler.collapsed
+      .navbar-toggler-icon
+        transform: rotate(0)
+      .navbar-toggler-icon:before
+        top: -10px
+        opacity: 1
+      .navbar-toggler-icon:after
+        bottom: -10px
+        transform: rotate(0)
+        .navbar-toggler-icon::before
+          transition: top 0.075s 0.12s ease, opacity 0.075s ease
+        .navbar-toggler-icon::after
+          transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    .navbar-toggler
+      .navbar-toggler-icon
+        transform: rotate(45deg)
+        transition-delay: 0.12s
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    .navbar-toggler
+      .navbar-toggler-icon::before
+        top: 0
+        opacity: 0
+        transition: top 0.075s ease, opacity 0.075s 0.12s ease
+    .navbar-toggler
+      .navbar-toggler-icon::after
+        bottom: 0
+        transform: rotate(-90deg)
+        transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)
     .navbar-nav
       .nav-item
-        &:hover, &.active
+        &:hover, &.show
+          background: lighten($head, 4%)
+        &.active
           background: lighten($head, 6%)
         .nav-link
           padding: 16px 10px
@@ -99,7 +158,7 @@ header
           color: $accent
         .dropdown-menu
           margin: 0
-          background: lighten($head, 6%)
+          background: lighten($head, 4%)
           border-radius: 0
           border: none
           .dropdown-item
@@ -127,20 +186,19 @@ header
 
 .greeting
   width: 100vw
-  height: calc(100vh - 1.2px)
-  padding-bottom: 180px
+  height: 100vh
+  margin-top: 54px
   display: flex
   align-items: center
   .cover
     background: url(/images/dest/greeting_bg.jpg) no-repeat
-  &-content
+  .greeting-content
     p
       padding: 10px 0 20px 0
       color: #000000
   &:after
     content: ''
     width: 100vw
-    height: 100px
     border-left: 50vw solid #fff
     border-right: 50vw solid #fff
     border-top: 100px solid transparent
@@ -149,7 +207,7 @@ header
 
 .services
   padding-bottom: 0
-  &-content
+  .services-content
     text-align: center
     .nav-tabs
       border-color: $accent
@@ -178,7 +236,6 @@ header
   &:before, &:after
     content: ''
     width: 100vw
-    height: 100px
     position: absolute
   &:before
     z-index: 1
@@ -190,9 +247,9 @@ header
   padding: 160px 0 160px 0
   .cover
     background: url(/images/dest/advantages_bg.jpg)
-  &-content
+  .advantages-content
     .card
-      height: 100%
+      min-height: 280px
       padding: 40px 20px 20px 20px
       border: none
       background: rgba(255, 255, 255, .8)
@@ -203,7 +260,6 @@ header
         width: 80px
         margin: 0 auto
       .card-title
-        min-height: 40px
         margin: 20px 0 10px 0
   &:before
     border-left: 50vw solid transparent
@@ -216,7 +272,7 @@ header
 
 .reviews
   text-align: center
-  &-content
+  .reviews-content
     position: relative
     text-align: left
     &:before, &:after
@@ -260,7 +316,6 @@ header
       width: 40px
       height: 40px
       background: $accent
-      border-radius: 50%
       z-index: 2
 
 .stages
@@ -275,11 +330,11 @@ header
     border-left: 50vw solid transparent
     border-right: 50vw solid transparent
     border-bottom: 100px solid #fff
-  &-content
-    width: 50%
-    margin: 0 auto
-    padding-top: 20px
+  .stages-content
     .wrapper
+      width: 50%
+      margin: 0 auto
+      padding-top: 20px
       position: relative
       .line
         width: 4px
@@ -315,7 +370,7 @@ header
 
 .consultation
   padding-top: 40px
-  &-content
+  .consultation-content
     text-align: center
     .btn-request
       margin-top: 20px
@@ -344,7 +399,7 @@ footer
           left: 0
           top: -2px
   .contacts
-    &-list
+    .contacts-list
       flex-direction: column
       &:before
         left: 20px
@@ -366,7 +421,7 @@ footer
     color: #fff
 
 .modal
-  &-content
+  .modal-content
     .modal-body
       .form-control:focus
         box-shadow: none
