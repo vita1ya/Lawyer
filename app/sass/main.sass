@@ -50,7 +50,6 @@ a.btn
     &:before
       background: url(/images/dest/contacts.png)
   .phone
-    font-family: $robotoBold
     &:before
       background: url(/images/dest/contacts.png)
 
@@ -79,6 +78,7 @@ header
           background-position: 16px 0
           top: 4px
       .phone
+        font-family: $robotoBold
         a
           color: $accent
         &:before
@@ -384,6 +384,9 @@ footer
     color: $accent
     &:hover
       text-decoration: underline
+  .navigation, .contacts
+    h5
+      color: #fff
   .navigation
     .menu, .submenu
       margin: 0
