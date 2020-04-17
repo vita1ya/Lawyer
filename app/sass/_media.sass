@@ -82,17 +82,6 @@
 @media only screen and (max-width : 767.9px)
   section
     padding: 30px 0 40px 0
-  
-  header
-    .contacts
-      .contacts-list
-        flex-wrap: wrap
-        li
-          margin-left: 0
-          &:nth-child(1), &:nth-child(2)
-            width: 50%
-          &:nth-child(3)
-            display: none
 
   .greeting:after, .advantages:before, .advantages:after
       border-top-width: 60px
@@ -140,11 +129,9 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479.9px)
   header
-    .contacts
-      .contacts-list
-        li
-          &:nth-child(1), &:nth-child(2)
-            width: 100%
+    .header-contacts
+      .email
+        margin-left: 20px
 
   .greeting:after, .advantages:before, .advantages:after
       border-top-width: 40px
@@ -180,7 +167,9 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319.9px)
-  /**/
+  header
+    .header-contacts
+      justify-content: space-between
 
 
 /* Mobile */

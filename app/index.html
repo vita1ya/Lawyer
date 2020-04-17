@@ -9,56 +9,64 @@
 	<link rel="icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/app.min.css">
 	
-	<title>Юридические консультации</title>
+	<title>Юридические услуги</title>
 </head>
 <body>
-	<header>
-		<div class="contacts">
-			<div class="container">
-				<ul class="contacts-list">
-					<li class="phone">
-						<a href="tel:+79126666666">+7 (912) 666-66-66</a>
+	<nav class="navbar navbar-expand-md">
+		<div class="container">
+			<a class="navbar-brand" href="/">Юридические услуги</a>
+
+			<button class="navbar-toggler d-sm-block d-md-none collapsed" type="button" data-toggle="collapse" data-target="#navbar-content">
+				<div class="navbar-toggler-icon"></div>
+			</button>
+	
+			<div class="collapse navbar-collapse justify-content-end justify-content-lg-center" id="navbar-content">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="/">Главная</a>
 					</li>
-					<li class="email">
-						<a href="mailto:maria@mail.ru">maria@mail.ru</a>
+					<li class="nav-item dropdown">
+						<span class="nav-link dropdown-toggle" data-toggle="dropdown">
+							Услуги
+						</span>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Физическим лицам</a>
+							<a class="dropdown-item" href="#">Юридическим лицам</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Оплата</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Контакты</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Обо мне</a>
 					</li>
 				</ul>
 			</div>
+
+			<ul class="nav-contacts d-none d-lg-block">
+				<li class="phone">
+					<a href="tel:+79126666666">+7 (912) 666-66-66</a>
+				</li>
+				<li class="email">
+					<a href="mailto:maria@mail.ru">maria@mail.ru</a>
+				</li>
+			</ul>
 		</div>
-		<nav class="navbar navbar-expand-md">
-			<div class="container">
-				<a class="navbar-brand" href="/">Юридические услуги</a>
-				<button class="navbar-toggler d-sm-block d-md-none collapsed" type="button" data-toggle="collapse" data-target="#navbar-content">
-					<div class="navbar-toggler-icon"></div>
-				</button>
-		
-				<div class="collapse navbar-collapse justify-content-end" id="navbar-content">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							<a class="nav-link" href="/">Главная</a>
-						</li>
-						<li class="nav-item dropdown">
-							<span class="nav-link dropdown-toggle" data-toggle="dropdown">
-								Услуги
-							</span>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Физическим лицам</a>
-								<a class="dropdown-item" href="#">Юридическим лицам</a>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Оплата</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Контакты</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Обо мне</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+	</nav>
+	<header class="d-block d-lg-none">
+		<div class="container">
+			<ul class="header-contacts">
+				<li class="phone">
+					<a href="tel:+79126666666">+7 (912) 666-66-66</a>
+				</li>
+				<li class="email">
+					<a href="mailto:maria@mail.ru">maria@mail.ru</a>
+				</li>
+			</ul>
+		</div>
 	</header>
 
 	<section class="greeting">
