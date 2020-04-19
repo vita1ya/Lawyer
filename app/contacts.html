@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<meta property="og:image" content="">
+	
+	<link rel="icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+	
+	<title>Юридические услуги - Контакты</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md">
+		<div class="container">
+			<a class="navbar-brand" href="/">Юридические услуги</a>
+
+			<button class="navbar-toggler d-sm-block d-md-none collapsed" type="button" data-toggle="collapse" data-target="#navbar-content">
+				<div class="navbar-toggler-icon"></div>
+			</button>
+	
+			<div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Главная</a>
+					</li>
+					<li class="nav-item dropdown">
+						<span class="nav-link dropdown-toggle" data-toggle="dropdown">
+							Услуги
+						</span>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Физическим лицам</a>
+							<a class="dropdown-item" href="#">Юридическим лицам</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Оплата</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Контакты</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Обо мне</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section class="contacts">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+					<div class="">
+						<h2>Контакты</h2>
+						<p>Если у Вас есть вопросы по нашим юридическим услугам - позвоните нам, напишите на e-mail или заполните заявку</p>
+						<ul class="contacts-list">
+							<li class="phone"><a href="tel:">+7 (912) 666-66-66</a></li>
+							<li class="email"><a href="mailto:">maria@mail.ru</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6">
+					<div class="question">
+						<form id="request-form" class="needs-validation" novalidate>
+							<div class="question-header">
+								<h2 class="question-title">Задать вопрос</h2>
+							</div>
+							<div class="question-content">
+								<div class="form-group">
+									<label for="name-form">Организация или ФИО<span class="required-star">*</span></label>
+									<input type="text" class="form-control" id="name-form" required>
+									<div class="invalid-feedback">Поле должно быть заполнено</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-6">
+										<label for="phone-form">Телефон<span class="required-star">*</span></label>
+										<input type="text" class="form-control" id="phone-form" required>
+										<div class="invalid-feedback">Поле должно быть заполнено</div>
+									</div>
+									<div class="form-group col-6">
+										<label for="email-form">E-mail</label>
+										<input type="email" class="form-control" id="email-form">
+										<div class="invalid-feedback">Поле должно быть заполнено</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="message-form">Сообщение<span class="required-star">*</span></label>
+									<textarea class="form-control" id="message-form" rows="3" required></textarea>
+									<div class="invalid-feedback">Поле должно быть заполнено</div>
+								</div>
+								<div class="form-group">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="check-form" required>
+										<label class="form-check-label" for="check-form">Я принимаю условия <a href="">политики
+												конфиденциальности</a><span class="required-star">*</span></label>
+										<div class="invalid-feedback">Условия должны быть приняты</div>
+									</div>
+								</div>
+							</div>
+							<div class="question-footer">
+								<button type="submit" class="btn sent-request">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="copyright">
+						<h6>Юридические услуги в Асбесте</h6>
+						<span>&copy; 2020 Все права защищены</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 @import config
 
+/* common styles */
+
 .btn
   border: none
   padding: 8px 20px
@@ -15,17 +17,6 @@
 
 a.btn
   display: inline-block
-
-.cover
-  width: 100%
-  height: 100%
-  position: absolute
-  background-position: center top !important
-  background-size: cover !important
-  opacity: .5
-  z-index: -1
-  left: 0
-  top: 0
 
 .navbar
   width: 100vw
@@ -56,7 +47,6 @@ a.btn
       width: 100%
       height: 4px
       background: $accent
-      border-radius: 4px
       position: absolute
       transition-property: transform
       transition-duration: 0.15s
@@ -121,24 +111,23 @@ a.btn
         padding-right: 22px
         position: relative
         color: #fff
-        &:hover
-          text-decoration: underline
         &:before
           content: ''
-          position: absolute
           width: 16px
           height: 16px
+          background-size: cover
+          position: absolute
           right: 0
     .phone
       font-size: 1rem
       font-family: $robotoBold
       a:before
         top: 2px
-        background: url(/images/dest/contacts.png) 0 0
+        background-image: url(/images/dest/phone-white.svg)
     .email
       a:before
         top: 1px
-        background: url(/images/dest/contacts.png) 16px 0
+        background-image: url(/images/dest/email-white.svg)
 
 .section-title
   font-weight: bold
@@ -185,9 +174,46 @@ header
       a:before
         background: url(/images/dest/contacts.png) 16px 0
 
+footer
+  width: 100vw
+  padding: 20px 0
+  background: $head
+  position: absolute
+  bottom: 0
+  .copyright
+    font-size: 12px
+    color: #fff
+
+.required-star
+  padding-left: 4px
+  color: #ff0000
+
+.modal, .appointment
+  .modal-content, .appointment-content
+    .form-control
+      &:focus
+        box-shadow: none
+        border-color: $accent
+    .form-check-label
+      a
+        text-decoration: underline
+
+/* home styles */
+
+.cover
+  width: 100%
+  height: 100%
+  position: absolute
+  background-position: center top !important
+  background-size: cover !important
+  opacity: .5
+  z-index: -1
+  left: 0
+  top: 0
+
 .greeting
   width: 100vw
-  height: 100vh
+  height: calc(100vh + 54.8px)
   display: flex
   align-items: center
   .cover
@@ -376,66 +402,34 @@ header
     .btn-request
       margin-top: 20px
 
-footer
-  width: 100vw
-  padding: 40px 0 20px 0
-  background: $head
-  a
-    color: $accent
-    &:hover
-      text-decoration: underline
-  .navigation, .contacts
-    h5
-      color: #fff
-  .navigation
-    .menu, .submenu
-      color: $accent
-    .menu
-      li
-        padding-left: 14px
-        position: relative
-        &:before
-          content: '\203A'
-          position: absolute
-          left: 0
-          top: -2px
-  .contacts
-    .contacts-list
-      &:before
-        left: 20px
-        top: 5px
-      li
-        padding-left: 26px
-        position: relative
-        line-height: 1.65
+/* contacts styles */
+
+.contacts
+  h2
+    font-size: 1.75rem
+    margin-bottom: 20px
+  .contacts-list
+    margin-top: 20px
+    li
+      font-size: 1.15rem
+      a
         color: $accent
+        padding-left: 32px
+        position: relative
         &:before
           content: ''
+          width: 22px
+          height: 22px
+          background-size: cover
           position: absolute
-          width: 16px
-          height: 16px
-          top: 3px
           left: 0
-      .email
-        &:before
-          background: url(/images/dest/contacts.png) 16px 16px
-      .phone
-        &:before
-          background: url(/images/dest/contacts.png) 0 16px
-  .copyright
-    font-size: 12px
-    color: #fff
-
-.modal
-  .modal-content
-    .modal-body
-      .form-control:focus
-        box-shadow: none
-      .form-check-label
-        a
-          text-decoration: underline
-      .required-star
-        padding-left: 4px
-        color: #ff0000
+    .phone
+      a:before
+        top: 1px
+        background-image: url(/images/dest/phone-accent.svg)
+    .email
+      a:before
+        top: 2px
+        background-image: url(/images/dest/email-accent.svg)
 
 @import _media
